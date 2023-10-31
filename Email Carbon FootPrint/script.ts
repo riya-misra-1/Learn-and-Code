@@ -41,7 +41,7 @@ function getCarbonFootprint(entity: emailEntity) {
         console.log(`inbox: ${(numberOfInboxEmails * 4)/1000} KG`);
         console.log(`sent: ${(numberOfSentEmails * 27)/1000} KG`);
         console.log(`spam: ${(numberOfSpamEmails * 0.3)/1000} KG`);
-        console.log(`Total Carbon Footprint: ${totalCarbonFootprint} KG CO2e`);
+        console.log(`Total Carbon Footprint: ${totalCarbonFootprint} g CO2e`);
 
       });
     });

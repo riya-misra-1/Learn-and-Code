@@ -32,7 +32,7 @@ function getCarbonFootprint(entity: emailEntity) {
         let totalCarbonFootprint = 0;
 
         if (entity.entityType === "email") {
-          totalCarbonFootprint += numberOfInboxEmails * 4 + numberOfSentEmails * 4 + numberOfSpamEmails * 0.3;
+          totalCarbonFootprint += numberOfInboxEmails * 4 + numberOfSentEmails * 27 + numberOfSpamEmails * 0.3;
         }
 
         console.log(`${entity.entityType} (entityType basis)`);
@@ -41,7 +41,7 @@ function getCarbonFootprint(entity: emailEntity) {
         console.log(`inbox: ${(numberOfInboxEmails * 4)/1000} KG`);
         console.log(`sent: ${(numberOfSentEmails * 27)/1000} KG`);
         console.log(`spam: ${(numberOfSpamEmails * 0.3)/1000} KG`);
-        console.log(`Total Carbon Footprint: ${totalCarbonFootprint} g CO2e`);
+        console.log(`Total Carbon Footprint: ${totalCarbonFootprint} KG CO2e`);
 
       });
     });

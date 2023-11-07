@@ -1,12 +1,14 @@
 const readline = require("readline");
 import { EmailEntity } from "./common/interface";
 
-class CarbonFootprintCalculator {
+class CarbonFootprintCalculator 
+{
   private numberOfInboxEmails: number;
   private numberOfSpamEmails: number;
   private numberOfSentEmails: number;
 
-  public readInput(entity: EmailEntity) {
+  public readInput(entity: EmailEntity) 
+  {
     const readLine = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
@@ -24,7 +26,8 @@ class CarbonFootprintCalculator {
     });
   }
 
-  private calculateTotalCarbonFootprint(entity: EmailEntity): number {
+  private calculateTotalCarbonFootprint(entity: EmailEntity): number 
+  {
     let totalCarbonFootprint = 0;
 
     if (entity.entityType === "email") {
@@ -37,7 +40,8 @@ class CarbonFootprintCalculator {
     return totalCarbonFootprint;
   }
 
-  private printResponse(entity: EmailEntity, totalCarbonFootprint: number) {
+  private printResponse(entity: EmailEntity, totalCarbonFootprint: number) 
+  {
     const result = {
       entityType: entity.entityType,
       email: entity.email,
@@ -51,7 +55,8 @@ class CarbonFootprintCalculator {
     console.log(result);
   }
 
-  private calculateAndPrintCarbonFootprint(entity: EmailEntity) {
+  private calculateAndPrintCarbonFootprint(entity: EmailEntity) 
+  {
     const totalCarbonFootprint = this.calculateTotalCarbonFootprint(entity);
     this.printResponse(entity, totalCarbonFootprint);
   }

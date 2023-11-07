@@ -1,4 +1,5 @@
-enum Source {
+enum Source 
+{
   Gmail = "Gmail",
   Outlook = "Outlook",
   Yahoo = "Yahoo",

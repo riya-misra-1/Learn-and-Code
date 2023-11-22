@@ -7,7 +7,7 @@ class CarbonFootprintCalculator
   private numberOfSpamEmails: number;
   private numberOfSentEmails: number;
 
-  public readInput(entity: EmailEntity) 
+  public readEmailInput(entity: EmailEntity) 
   {
     const readLine = readline.createInterface({
       input: process.stdin,
@@ -20,7 +20,9 @@ class CarbonFootprintCalculator
         this.numberOfSpamEmails = parseInt(spamEmail);
         readLine.question("Total emails sent: ", (sentEmail) => {
           this.numberOfSentEmails = parseInt(sentEmail);
-          this.calculateAndPrintCarbonFootprint(entity);
+          const totalCarbonFootprint =
+            this.calculateTotalCarbonFootprint(entity);
+          this.printResponse(entity, totalCarbonFootprint);
         });
       });
     });
@@ -55,11 +57,7 @@ class CarbonFootprintCalculator
     console.log(result);
   }
 
-  private calculateAndPrintCarbonFootprint(entity: EmailEntity) 
-  {
-    const totalCarbonFootprint = this.calculateTotalCarbonFootprint(entity);
-    this.printResponse(entity, totalCarbonFootprint);
-  }
+    
 }
 
 export default CarbonFootprintCalculator;

@@ -10,4 +10,4 @@ const emailEntity: EmailEntity =
 };
 
 const calculator = new CarbonFootprintCalculator();
-calculator.readInput(emailEntity);
+calculator.readEmailInput(emailEntity);

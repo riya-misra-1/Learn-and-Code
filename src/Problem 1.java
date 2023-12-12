@@ -1,27 +1,27 @@
-public class DataProcessor {
-    int integerValue;
-    double decimalValue;
-    String text;
+public class Calculator {
+    int firstOperand;
+    double secondOperand;
+    String convertedUppercaseText;
 
-    public void displayCalculatedSum(int firstNumber, int secondNumber) {
-        int additionResult = firstNumber + secondNumber;
+    public void displayCalculatedSum(int firstOperand, int secondOperand) {
+        int additionResult = firstOperand + secondOperand;
         System.out.println("Result: " + additionResult);
     }
 
     public void displayUpperCaseString(String inputText) {
-        text = inputText.toUpperCase();
-        System.out.println("Updated String: " + text);
+        convertedUppercaseText = inputText.toUpperCase();
+        System.out.println("Updated String: " + convertedUppercaseText);
     }
 }
 
-public class ProgramExecutor {
+public class CalculatorApp {
     public static void main(String[] args) {
-        DataProcessor dataHandlerObject = new DataProcessor();
-        dataHandlerObject.integerValue = 10; 
-        dataHandlerObject.decimalValue = 20.5; 
-        dataHandlerObject.text = "hello"; 
+        Calculator calculator = new Calculator();
+        calculator.firstOperand = 10; 
+        calculator.secondOperand = 20.5; 
+        calculator.text = "hello"; 
         
-        dataHandlerObject.displayCalculatedSum(dataHandlerObject.integerValue, 5);
-        dataHandlerObject.displayUpperCaseString("world");
+        calculator.displayCalculatedSum(calculator.firstOperand, 5);
+        calculator.displayUpperCaseString("world");
     }
 }

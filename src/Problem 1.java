@@ -19,7 +19,7 @@ public class CalculatorApp {
         Calculator calculator = new Calculator();
         calculator.firstOperand = 10; 
         calculator.secondOperand = 20.5; 
-        calculator.text = "hello"; 
+        calculator.convertedUppercaseText = "hello"; 
         
         calculator.displayCalculatedSum(calculator.firstOperand, 5);
         calculator.displayUpperCaseString("world");
